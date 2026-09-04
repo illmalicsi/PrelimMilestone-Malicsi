@@ -155,33 +155,58 @@ h1, h2, h3, p { margin: 0; }
 
 /* ---------- About ---------- */
 .about { border-bottom: 1px solid var(--border); }
-.about-page { border-bottom: none; padding-top: var(--space-3); }
+.about-page {
+  border-bottom: none;
+  padding-top: var(--space-4);
+  background: radial-gradient(ellipse 70% 40% at 15% 0%, rgba(47, 129, 247, 0.1), transparent);
+}
 .projects-page { border-bottom: none; padding-top: var(--space-3); }
 .about h2, .projects h2, .contact h2 {
   font-size: 1.6rem;
   letter-spacing: -0.02em;
   margin-bottom: var(--space-3);
 }
+.about-page h2 { margin-top: var(--space-1); margin-bottom: var(--space-4); }
+
 .about-grid {
   display: grid;
-  gap: var(--space-3);
+  gap: var(--space-4);
+}
+.about-mark {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--focus);
+  margin-bottom: var(--space-2);
 }
 .about-text p { color: var(--fg-muted); margin-bottom: var(--space-2); }
+
 .about-facts {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   gap: var(--space-2);
-  border-top: 1px solid var(--border);
-  padding-top: var(--space-2);
+  align-content: start;
 }
 .about-facts li {
   display: flex;
-  justify-content: space-between;
-  font-size: 0.9rem;
-  padding: var(--space-1) 0;
-  border-bottom: 1px solid var(--border);
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: var(--space-2);
+  border: 1px solid var(--border);
+  border-top: 2px solid var(--focus);
+  border-radius: var(--radius);
+  background: var(--bg-card);
 }
-.fact-label { color: var(--fg-muted); }
+.fact-label {
+  color: var(--fg-muted);
+  font-size: 0.78rem;
+  font-family: var(--font-mono);
+  text-transform: lowercase;
+}
+.fact-value { font-size: 0.95rem; }
 
 /* ---------- Projects ---------- */
 .projects { border-bottom: 1px solid var(--border); }
