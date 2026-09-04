@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects</title>
+  <meta name="description" content="Project gallery pulled live from GitHub repositories.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="navbar" aria-label="Primary">
+      <a href="index.html" class="logo">malicsi<span class="logo-dot">.</span>dev</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html" aria-current="page">Projects</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="projects projects-page">
+      <div class="section-inner">
+        <div class="projects-header">
+          <h2>Projects</h2>
+          <div class="search-wrap">
+            <label for="project-search" class="visually-hidden">Search projects by name</label>
+            <input
+              type="search"
+              id="project-search"
+              name="project-search"
+              placeholder="Search repositories…"
+              autocomplete="off"
+            >
+          </div>
+        </div>
+
+        <p id="fetch-status" class="fetch-status" role="status" aria-live="polite"></p>
+
+        <div id="loading-spinner" class="spinner" role="status" aria-live="polite" hidden>
+          <span class="spinner-circle" aria-hidden="true"></span>
+          <span>Loading repositories…</span>
+        </div>
+
+        <p id="empty-state" class="empty-state" hidden>No repositories match your search.</p>
+
+        <div id="project-grid" class="project-grid" aria-live="polite"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>&copy; 2026 Malicsi.</p>
+      <ul class="footer-links">
+        <li><a href="https://github.com/illmalicsi" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        <li><a href="#top">Back to top</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
